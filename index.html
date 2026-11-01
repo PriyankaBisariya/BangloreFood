@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namma Bengaluru Bhojan – Authentic Food & Nightlife Guide</title>
+  <meta name="description" content="Discover the best verified restaurants, breweries, Gujarati thalis, iconic dosas, and late-night spots in Bangalore. Curated from The Hindu, Deccan Herald, and Condé Nast Traveller." />
+  <meta property="og:title" content="Namma Bengaluru Bhojan – Authentic Bangalore Food Guide" />
+  <meta property="og:description" content="Complete guide with live opening & closing hours, parking facilities, critic reviews, and signature dishes." />
+
+  <!-- Google Fonts: Outfit (Sans) + Playfair Display (Serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ 1. NAVBAR (LIGHT GLASS) ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <div class="brand-icon">🍛</div>
+        <div class="brand-text-wrapper">
+          <span class="brand-title">Namma Bengaluru Bhojan</span>
+          <span class="brand-subtitle">Authentic Food &amp; Nightlife Guide</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <div class="nav-source-pill">
+          <span class="dot"></span>
+          <span>Verified Press Sources</span>
+        </div>
+        <button type="button" class="btn-surprise-nav" id="surpriseBtnNav">
+          <span>🎲</span> Surprise Me
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ 2. HERO SECTION (LIGHT LUXURY) ═══ -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text-col">
+          <div class="hero-badge-tag">
+            <span>✨</span> 100% Verified by City Newspapers &amp; Food Critics
+          </div>
+          <h1 class="hero-title">
+            The Curated Taste of<br />
+            <span class="hero-highlight">Namma Bengaluru</span>
+          </h1>
+          <p class="hero-lead">
+            From centennial butter dosas and royal Gujarati thalis to award-winning microbreweries and late-night biryani messes — complete with live hours, parking info, and critic reviews.
+          </p>
+
+          <!-- Authentic Newspaper Badges -->
+          <div class="hero-press-strip">
+            <span class="press-label">Curated From:</span>
+            <span class="press-chip">📰 The Hindu</span>
+            <span class="press-chip">📜 Deccan Herald</span>
+            <span class="press-chip">✨ Condé Nast Traveller</span>
+            <span class="press-chip">🏆 Times Food Awards</span>
+            <span class="press-chip">🌟 LBB Bangalore</span>
+          </div>
+
+          <!-- Hero Stats Matrix -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-block">
+              <span class="stat-num">44+</span>
+              <span class="stat-desc">Curated Places</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-block">
+              <span class="stat-num">8</span>
+              <span class="stat-desc">Food Categories</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-block">
+              <span class="stat-num">4.6★</span>
+              <span class="stat-desc">Average Rating</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat-block">
+              <span class="stat-num">100%</span>
+              <span class="stat-desc">Parking &amp; Hours Listed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Visual Card -->
+        <div class="hero-visual-card">
+          <img src="hero.jpg" alt="Rich Bangalore Food Feast" class="hero-image" />
+          <div class="hero-card-overlay">
+            <h4>Bengaluru’s Culinary Soul</h4>
+            <p>From Gandhi Bazaar's breakfast shrines to 100ft Road's craft beer taps.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ 3. STICKY DISCOVERY ENGINE (SEARCH & TOOLS) ═══ -->
+  <section class="toolbar-section" id="toolsSection">
+    <div class="container">
+      
+      <!-- Top Row: Search Input + Neighborhood Dropdown + Sort Dropdown -->
+      <div class="toolbar-top-row">
+        <!-- Live Search Box -->
+        <div class="search-box-wrapper">
+          <span class="search-icon">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="search-input" 
+            placeholder="Search by restaurant name, dish (e.g. Dosa, Stout, Thali, Biryani), or area..." 
+            autocomplete="off"
+          />
+          <button type="button" class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">×</button>
+        </div>
+
+        <!-- Neighborhood Area Selector Tool -->
+        <div class="select-wrapper">
+          <select id="areaSelect" class="custom-select" aria-label="Filter by Neighborhood">
+            <option value="all">📍 All Neighborhoods</option>
+            <option value="Indiranagar">Indiranagar (100ft &amp; 12th Main)</option>
+            <option value="Koramangala">Koramangala (4th &amp; 5th Block)</option>
+            <option value="Malleshwaram">Malleshwaram</option>
+            <option value="Basavanagudi">Basavanagudi &amp; Gandhi Bazaar</option>
+            <option value="Jayanagar">Jayanagar</option>
+            <option value="MG Road">MG Road &amp; Lavelle Road</option>
+            <option value="Whitefield">Whitefield</option>
+            <option value="Central">Central Bangalore / Sankey Rd</option>
+            <option value="Hennur">Hennur &amp; North Bangalore</option>
+            <option value="Devanahalli">Devanahalli</option>
+          </select>
+          <span class="select-arrow">▼</span>
+        </div>
+
+        <!-- Sort Tool -->
+        <div class="sort-wrapper">
+          <select id="sortSelect" class="custom-select" aria-label="Sort options">
+            <option value="rating-desc">⭐ Highest Rated</option>
+            <option value="reviews-desc">🔥 Most Reviewed</option>
+            <option value="price-asc">💰 Price: Low to High</option>
+            <option value="price-desc">💎 Price: High to Low</option>
+            <option value="name-asc">🔤 Name: A to Z</option>
+          </select>
+          <span class="select-arrow">▼</span>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills with Live Count Badges -->
+      <div class="category-pills-row" role="tablist">
+        <button type="button" class="category-btn active" data-category="all" role="tab">
+          <span>🍽️</span> All Spots <span class="category-count">44</span>
+        </button>
+        <button type="button" class="category-btn" data-category="north-indian" role="tab">
+          <span>🍲</span> North Indian <span class="category-count">7</span>
+        </button>
+        <button type="button" class="category-btn" data-category="south-indian" role="tab">
+          <span>🥥</span> South Indian <span class="category-count">8</span>
+        </button>
+        <button type="button" class="category-btn" data-category="gujarati" role="tab">
+          <span>🥗</span> Gujarati &amp; Rajasthani <span class="category-count">6</span>
+        </button>
+        <button type="button" class="category-btn" data-category="biryani" role="tab">
+          <span>🍛</span> Biryani &amp; Messes <span class="category-count">6</span>
+        </button>
+        <button type="button" class="category-btn" data-category="cafes" role="tab">
+          <span>☕</span> Cafés &amp; Bakeries <span class="category-count">7</span>
+        </button>
+        <button type="button" class="category-btn" data-category="nightlife" role="tab">
+          <span>🍸</span> Nightlife &amp; Breweries <span class="category-count">8</span>
+        </button>
+        <button type="button" class="category-btn" data-category="international" role="tab">
+          <span>🌍</span> International <span class="category-count">6</span>
+        </button>
+        <button type="button" class="category-btn" data-category="street-food" role="tab">
+          <span>🍢</span> Street Food Hubs <span class="category-count">2</span>
+        </button>
+      </div>
+
+      <!-- Quick Feature Multi-Toggle Chips (Veg, Bar, Parking, Late Night) -->
+      <div class="feature-chips-bar">
+        <span class="feature-chip-label">Quick Filters:</span>
+        <button type="button" class="toggle-chip veg" data-filter="veg">
+          <span>🌱</span> Pure Veg Only
+        </button>
+        <button type="button" class="toggle-chip bar" data-filter="bar">
+          <span>🍺</span> Microbrewery &amp; Bar
+        </button>
+        <button type="button" class="toggle-chip valet" data-filter="valet">
+          <span>🚗</span> Valet / Easy Parking
+        </button>
+        <button type="button" class="toggle-chip latenight" data-filter="latenight">
+          <span>🌙</span> Open Late Night (Past 11:30 PM)
+        </button>
+        <button type="button" class="toggle-chip" data-filter="toprated">
+          <span>⭐</span> 4.6★+ Top Rated
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══ 4. RESULTS SECTION & CARDS GRID ═══ -->
+  <main class="main-content">
+    <div class="container">
+      
+      <!-- Results Count Strip -->
+      <div class="results-strip">
+        <div class="results-count-text" id="resultsCountText">
+          Showing 44 of 44 verified culinary spots
+        </div>
+        <button type="button" class="active-filter-indicator" id="resetFiltersBtn">
+          Reset all filters
+        </button>
+      </div>
+
+      <!-- Dynamic Cards Grid (Rendered by script.js) -->
+      <div class="cards-grid" id="cardsGrid">
+        <!-- Rendered dynamically -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ═══ 5. DEEP DIVE DETAIL MODAL (AUTHENTIC REVIEWS & TOOLS) ═══ -->
+  <div class="modal-backdrop" id="detailsModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">✕</button>
+      
+      <div class="modal-badge-row">
+        <span class="card-category-tag" id="modalCategory">South Indian</span>
+      </div>
+      
+      <h2 class="modal-title" id="modalTitle">Restaurant Name</h2>
+      
+      <div class="modal-rating-row">
+        <span class="rating-pill" id="modalRating">★ 4.8</span>
+        <span class="rating-reviews" id="modalReviews">24,000+ Reviews</span>
+        <span class="meta-chip price" id="modalPrice">₹1,200 for 2</span>
+      </div>
+
+      <!-- Authentic Newspaper Quote -->
+      <div class="modal-quote-box">
+        <div class="modal-quote-source" id="modalQuoteSource">📰 The Hindu Metroplus</div>
+        <p class="modal-quote-text" id="modalQuoteText">“Authentic review excerpt goes here...”</p>
+      </div>
+
+      <!-- Description -->
+      <p style="font-size:0.95rem; color:var(--text-body); margin-bottom:20px; line-height:1.6;" id="modalDescText">
+        Detailed culinary background...
+      </p>
+
+      <!-- Practical Info Matrix (Timings, Parking, Location) -->
+      <div class="modal-grid-info">
+        <div class="modal-info-item">
+          <span class="modal-info-label">🕒 Operating Hours</span>
+          <span class="modal-info-val" id="modalTimings">12:00 PM – 1:00 AM</span>
+        </div>
+        <div class="modal-info-item">
+          <span class="modal-info-label">🚗 Parking Facility</span>
+          <span class="modal-info-val" id="modalParking">Dedicated Valet Parking</span>
+        </div>
+        <div class="modal-info-item">
+          <span class="modal-info-label">📍 Neighborhood</span>
+          <span class="modal-info-val" id="modalArea">Indiranagar 100ft Road</span>
+        </div>
+        <div class="modal-info-item">
+          <span class="modal-info-label">💰 Average Cost</span>
+          <span class="modal-info-val">Cost for two with beverages</span>
+        </div>
+      </div>
+
+      <!-- Insider Tip Box -->
+      <div class="modal-tip-box">
+        <div class="modal-tip-title">💡 Local Insider Tip</div>
+        <p class="modal-tip-text" id="modalTipText">Timing and booking guidance...</p>
+      </div>
+
+      <!-- Signature Dishes -->
+      <div style="margin-bottom:24px;">
+        <div style="font-size:0.78rem; font-weight:700; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px;">
+          ✨ Must-Order Signature Dishes
+        </div>
+        <div class="dish-tags" id="modalMustTry">
+          <!-- Tags injected here -->
+        </div>
+      </div>
+
+      <!-- Modal Action Buttons -->
+      <div class="modal-actions">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn-modal-primary" id="modalMapsBtn">
+          🗺️ Open in Google Maps
+        </a>
+        <button type="button" class="btn-modal-secondary" id="modalCopyBtn">
+          📋 Copy Details
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══ 6. SURPRISE ME (FOOD ROULETTE DECISION MAKER) ═══ -->
+  <div class="modal-backdrop" id="rouletteModal" role="dialog" aria-modal="true" aria-labelledby="rouletteTitle">
+    <div class="modal-card" style="max-width: 560px;">
+      <button type="button" class="modal-close-btn" id="rouletteCloseBtn" aria-label="Close dialog">✕</button>
+      
+      <div class="roulette-container">
+        <div class="roulette-icon">🎲</div>
+        <h2 class="roulette-title" id="rouletteTitle">Bengaluru Food Roulette</h2>
+        <p class="roulette-subtitle">Can't decide where to eat? Let our curated algorithm pick a top spot for you!</p>
+
+        <!-- Roulette Result Container -->
+        <div class="roulette-result-card" id="rouletteCardArea">
+          <!-- Dynamically inserted by JS -->
+        </div>
+
+        <button type="button" class="roulette-btn-spin" id="spinRouletteBtn">
+          🎲 Spin Again / Different Spot
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ 7. TOAST NOTIFICATION POPUP ═══ -->
+  <div class="toast-notice" id="toastNotice">
+    Copied to clipboard! 📋
+  </div>
+
+  <!-- ═══ 8. FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Namma Bengaluru Bhojan 🍛</h3>
+          <p>
+            An authentic, independent guide celebrating Bengaluru’s rich food heritage, traditional breakfast shrines, royal Gujarati thalis, iconic microbreweries, and contemporary gastronomy.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Authenticated By</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.thehindu.com" target="_blank" rel="noopener">The Hindu Metroplus</a></li>
+            <li><a href="https://www.deccanherald.com" target="_blank" rel="noopener">Deccan Herald</a></li>
+            <li><a href="https://www.cntraveller.in" target="_blank" rel="noopener">Condé Nast Traveller India</a></li>
+            <li><a href="https://timesofindia.indiatimes.com" target="_blank" rel="noopener">Times Food &amp; Nightlife</a></li>
+            <li><a href="https://lbb.in/bangalore" target="_blank" rel="noopener">LBB Bangalore</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Key Cuisines</h4>
+          <ul class="footer-links">
+            <li><a href="#toolsSection" onclick="document.querySelector('[data-category=\'south-indian\']').click()">Iconic South Indian Tiffin</a></li>
+            <li><a href="#toolsSection" onclick="document.querySelector('[data-category=\'gujarati\']').click()">Authentic Gujarati &amp; Marwari Thalis</a></li>
+            <li><a href="#toolsSection" onclick="document.querySelector('[data-category=\'nightlife\']').click()">Craft Beer &amp; Microbreweries</a></li>
+            <li><a href="#toolsSection" onclick="document.querySelector('[data-category=\'biryani\']').click()">Donne &amp; Military Biryanis</a></li>
+            <li><a href="#toolsSection" onclick="document.querySelector('[data-category=\'north-indian\']').click()">Frontier &amp; Awadhi Curries</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Namma Bengaluru Bhojan • Built for Bangalore Food Lovers with ❤️ and authentic journalism.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="restaurants-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
